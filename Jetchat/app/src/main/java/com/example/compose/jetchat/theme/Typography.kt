@@ -34,13 +34,23 @@ val provider = GoogleFont.Provider(
 )
 
 @OptIn(ExperimentalTextApi::class)
+val MontserratFont = GoogleFont("Montserrat")
+
+@OptIn(ExperimentalTextApi::class)
+val KarlaFont = GoogleFont("Karla")
+
+@OptIn(ExperimentalTextApi::class)
 val MontserratFontFamily = FontFamily(
-    Font(googleFont = GoogleFont("Montserrat"), fontProvider = provider)
+    Font(googleFont = MontserratFont, fontProvider = provider),
+    Font(googleFont = MontserratFont, fontProvider = provider, weight = FontWeight.Light),
+    Font(googleFont = MontserratFont, fontProvider = provider, weight = FontWeight.Medium),
+    Font(googleFont = MontserratFont, fontProvider = provider, weight = FontWeight.SemiBold),
 )
 
 @OptIn(ExperimentalTextApi::class)
 val KarlaFontFamily = FontFamily(
-    Font(googleFont = GoogleFont("Karla"), fontProvider = provider)
+    Font(googleFont = KarlaFont, fontProvider = provider),
+    Font(googleFont = KarlaFont, fontProvider = provider, weight = FontWeight.Bold)
 )
 
 val JetchatTypography = Typography(
